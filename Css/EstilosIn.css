@@ -1,0 +1,155 @@
+/* Estilos generales y reinicio básico */
+body {
+    font-family: Arial, sans-serif; /* Usa una fuente legible, puedes importar una de Google Fonts */
+    margin: 0;
+    padding: 0px;
+    background-color: #f4f4f4; /* Fondo de la página */
+}
+
+header{
+  background: #074183;
+  color: white;
+    padding-bottom: 20px;
+    padding-top: 1px;
+    margin: 0;
+    text-align: center;
+}
+
+/* --- CONFIGURACIÓN BASE: Elimina márgenes predeterminados --- */
+
+.seccion-educacion h4 {
+    /* Ajuste para los títulos de la educación/cursos */
+    margin-top: 15px; /* Espacio moderado sobre el título (separación de la sección anterior) */
+    margin-bottom: 0px; /* Espacio pequeño debajo del título */
+}
+
+.seccion-educacion p {
+    /* Elimina márgenes de todos los párrafos por defecto */
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.3; /* Hace que el texto dentro del párrafo sea más compacto */
+}
+
+/* --- CLASES DE ESPACIADO PERSONALIZADO --- */
+
+.espacio-pequeno-abajo {
+    /* Útil para la línea (En Formación) o fechas, que van pegadas a la siguiente. */
+    margin-bottom: 0px !important; 
+}
+
+.separador-medio {
+    /* Espacio moderado, por ejemplo, entre (En Formación) y (Universitaria De Colombia) */
+    margin-bottom: 0px !important;
+}
+
+.separador-grande {
+    /* Espacio grande para separar bloques completos de educación (ej: Ingeniería y Técnico) */
+    margin-bottom: 25px !important;
+}
+
+.sobre-mi {
+    max-width: 1125px; /* Ancho máximo similar a una hoja A4 */
+    margin: 40px auto;
+    padding: 10px 15px; /* Relleno interno para que el texto respire */
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Una sombra suave para dar profundidad */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+}
+
+.perfil {
+    /* 1. Habilita Flexbox: Coloca los hijos en fila */
+    display: flex;
+    
+    /* 2. Alineación Vertical: Centra la imagen y el texto verticalmente (opcional pero recomendado) */
+    align-items: center; 
+    
+    /* 3. Espaciado: Agrega un espacio entre la imagen y el texto */
+    gap: 20px; /* Puedes ajustar este valor */
+
+    width: 600px; 
+    /* Nota: 150px (foto) + 20px (gap) + ~280px (texto) = ~450px. Ajusta este número. */
+
+    /* 3. **CENTRAR HORIZONTALMENTE** */
+    margin: 0 auto;
+}
+
+.Info {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+
+
+.contenedor-cv {
+    max-width: 1150px; /* Ancho máximo similar a una hoja A4 */
+    margin: 40px auto;
+    background-color: #ffffff; /* Fondo del CV (blanco) */
+    box-shadow: 0 0 10px rgba(171, 46, 46, 0.1); /* Sombra para simular una hoja */
+    display: flex; /* Habilita el diseño de dos columnas */
+}
+
+/* Diseño de dos columnas */
+.columna-izquierda {
+    width: 35%; /* La columna de información suele ser más estrecha */
+    padding: 30px 20px;
+    background-color: #074183; /* Color de fondo oscuro (ej: gris o azul oscuro) para destacar */
+    color: white; /* Texto blanco en la columna oscura */
+}
+
+.columna-derecha {
+    width: 65%; /* La columna principal es más ancha */
+    padding: 30px 40px;
+}
+
+/* Estilos de secciones y títulos */
+.seccion {
+    margin-bottom: 25px;
+}
+
+.seccion h3 {
+    padding-bottom: 1px;
+    margin-top: 20;
+}
+
+/* Estilos específicos para texto */
+.datos-personales h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.datos-personales h2 {
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+/* Estilo para listas sin viñetas (ej. Habilidades) */
+.habilidades ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Estilos para la experiencia laboral */
+.puesto h4 {
+    margin-bottom: 5px;
+    color: #0056b3; /* Color para destacar el puesto/empresa */
+}
+
+.puesto .fechas {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Media Query para hacer el diseño Responsive (en móviles se convierte en una sola columna) */
+@media (max-width: 768px) {
+    .contenedor-cv {
+        flex-direction: column; /* Apila las columnas verticalmente */
+    }
+    .columna-izquierda, .columna-derecha {
+        width: 100%;
+        padding: 20px;
+    }
+}
