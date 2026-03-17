@@ -93,7 +93,7 @@ header{
 .columna-izquierda {
     width: 35%; /* La columna de información suele ser más estrecha */
     padding: 30px 20px;
-    background-color: #ba1aaa; /* Color de fondo oscuro (ej: gris o azul oscuro) para destacar */
+    background-color: #074183; /* Color de fondo oscuro (ej: gris o azul oscuro) para destacar */
     color: white; /* Texto blanco en la columna oscura */
 }
 
